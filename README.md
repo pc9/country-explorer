@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Country Explorer - Next.js Project
 
-## Getting Started
+A Simple NextJs project to implement search functionality using a public API [REST Countries](https://restcountries.com/). Web App with 2 screens
 
-First, run the development server:
+- Listing and Search screen
+- Country Information screen
 
-```bash
+![Project Preview](public/preview.gif 'Project Preview')
+[Demo](https://country-explorer-rho.vercel.app/)
+
+### Highlights
+
+- Next.js -13 Project
+- Follows newer App rouing introduced in Next.js 13
+- Styled using Tailwind CSS
+- `@tanstack/react-query` as data fetching libraray
+- SSR
+- Server API caching
+- Fetching data while rendering using `<Suspense>`
+- Linting using `Eslint`
+- `Prettier` for code formatting
+- `throttle` and `useDeferredValue` both are used in combination with `useQuery` from `react-query` to optimise fetch and render search results.
+
+### Getting Started
+
+- Simply run these commands
+
+```sh
+# Clone the repository
+git clone https://github.com/pc9/country-explorer.git
+
+# Navigate to the project directory
+cd country-explorer
+
+# Install dependencies
+npm install
+
+# run developent server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Create a copy of `.evn` as `.evn.local` and add `NEXT_PUBLIC_GOOGLE_API_KEY` value to render maps (Optional).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Open http://localhost:3000 with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Useful Commands
 
-## Learn More
+```sh
+# to run development server
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# to create build
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# to start using the build
+npm start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# to lint manually
+npm run lint
 
-## Deploy on Vercel
+# to run prettier manually
+npm run format
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Potential Enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Adding service worker to add offline support.
+- Design improvement in terms of both UI and UX.
+- Loading optimization by adding critical CSS.
+- Adding Internationalization (i18n) in project.
+- Adding `manifest.json` for making web app Installable on devices.
+- Building PWA.
